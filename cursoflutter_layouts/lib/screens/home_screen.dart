@@ -1,5 +1,9 @@
 import 'package:cursoflutter_layouts/components/box_card.dart';
+import 'package:cursoflutter_layouts/components/color_dot.dart';
+import 'package:cursoflutter_layouts/components/sections/account_actions.dart';
 import 'package:cursoflutter_layouts/components/sections/header.dart';
+import 'package:cursoflutter_layouts/components/sections/recenty_activity.dart';
+import 'package:cursoflutter_layouts/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class home_screen extends StatelessWidget {
@@ -7,9 +11,9 @@ class home_screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
-        children: [Header(), BoxCard(boxContent: Text("Text"))],
+        children: [Header(), RecentActivity(), AccountAction()],
       ),
     );
   }
