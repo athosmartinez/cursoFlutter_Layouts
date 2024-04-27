@@ -13,75 +13,55 @@ class AccountAction extends StatelessWidget {
           padding: const EdgeInsets.only(top: 20, left: 20),
           child: Text(
             "Ações da conta",
-            style: Theme.of(context).textTheme.bodyMedium,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 12),
+        const Padding(
+          padding: EdgeInsets.only(top: 12),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               BoxCard(
-                boxContent: Container(
-                  height: 75,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.wallet),
-                      Padding(
-                        padding: EdgeInsets.only(top: 8),
-                        child: Text("Depositar"),
-                      ),
-                    ],
-                  ),
-                ),
+                boxContent: _AccountActionsContent(
+                    icon: Icon(Icons.wallet), text: "Depositar"),
               ),
               BoxCard(
-                boxContent: Container(
-                  height: 75,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.sync),
-                      Padding(
-                        padding: EdgeInsets.only(top: 8),
-                        child: Text("Transferir"),
-                      ),
-                    ],
-                  ),
-                ),
+                boxContent: _AccountActionsContent(
+                    icon: Icon(Icons.sync), text: "Transferir"),
               ),
               BoxCard(
-                boxContent: Container(
-                  height: 75,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.center_focus_strong),
-                      Padding(
-                        padding: EdgeInsets.only(top: 8),
-                        child: Text("Ler"),
-                      ),
-                    ],
-                  ),
-                ),
+                boxContent: _AccountActionsContent(
+                    icon: Icon(Icons.center_focus_strong), text: "Ler"),
               ),
             ],
           ),
         )
       ],
+    );
+  }
+}
+
+class _AccountActionsContent extends StatelessWidget {
+  final Icon icon;
+  final String text;
+  const _AccountActionsContent(
+      {super.key, required this.icon, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 75,
+      width: 90,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          icon,
+          Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: Text(text),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -6,7 +6,7 @@ ThemeData MyTheme = ThemeData(
   primaryColor: ThemeColors.primaryColor,
   brightness: Brightness.dark,
   textTheme: const TextTheme(
-    bodyMedium: TextStyle(fontSize: 16),
-    bodyLarge: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
-  ),
+      bodyMedium: TextStyle(fontSize: 16),
+      bodyLarge: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
+      titleMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.normal)),
 );
