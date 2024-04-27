@@ -16,22 +16,31 @@ class AccountAction extends StatelessWidget {
             style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.only(top: 12),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              BoxCard(
-                boxContent: _AccountActionsContent(
-                    icon: Icon(Icons.wallet), text: "Depositar"),
+              InkWell(
+                onTap: () {},
+                child: const BoxCard(
+                  boxContent: _AccountActionsContent(
+                      icon: Icon(Icons.wallet), text: "Depositar"),
+                ),
               ),
-              BoxCard(
-                boxContent: _AccountActionsContent(
-                    icon: Icon(Icons.sync), text: "Transferir"),
+              InkWell(
+                onTap: () {},
+                child: const BoxCard(
+                  boxContent: _AccountActionsContent(
+                      icon: Icon(Icons.cached), text: "Transferir"),
+                ),
               ),
-              BoxCard(
-                boxContent: _AccountActionsContent(
-                    icon: Icon(Icons.center_focus_strong), text: "Ler"),
+              InkWell(
+                onTap: () {},
+                child: const BoxCard(
+                  boxContent: _AccountActionsContent(
+                      icon: Icon(Icons.center_focus_strong), text: "Ler"),
+                ),
               ),
             ],
           ),
@@ -50,7 +59,6 @@ class _AccountActionsContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 75,
       width: 90,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
