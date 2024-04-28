@@ -16,7 +16,7 @@ class Header extends StatelessWidget {
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(15)),
       ),
       child: Padding(
-        padding: EdgeInsets.fromLTRB(16.0, 83.0, 16.0, 16.0),
+        padding: const EdgeInsets.fromLTRB(16.0, 83.0, 16.0, 16.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,

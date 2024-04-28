@@ -10,14 +10,14 @@ class AccountAction extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 20, left: 20),
+          padding: const EdgeInsets.only(top: 12, left: 20),
           child: Text(
             "Ações da conta",
             style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 12),
+          padding: const EdgeInsets.only(top: 12),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -54,7 +54,7 @@ class _AccountActionsContent extends StatelessWidget {
   final Icon icon;
   final String text;
   const _AccountActionsContent(
-      {super.key, required this.icon, required this.text});
+      {required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {

@@ -1,19 +1,23 @@
-import 'package:cursoflutter_layouts/components/box_card.dart';
-import 'package:cursoflutter_layouts/components/color_dot.dart';
+
 import 'package:cursoflutter_layouts/components/sections/account_actions.dart';
+import 'package:cursoflutter_layouts/components/sections/account_points.dart';
 import 'package:cursoflutter_layouts/components/sections/header.dart';
 import 'package:cursoflutter_layouts/components/sections/recenty_activity.dart';
-import 'package:cursoflutter_layouts/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
-class home_screen extends StatelessWidget {
-  const home_screen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
-        children: [Header(), RecentActivity(), AccountAction()],
+        children: [
+          Header(),
+          RecentActivity(),
+          AccountAction(),
+          AccountPoints()
+        ],
       ),
     );
   }
